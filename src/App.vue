@@ -963,7 +963,7 @@ onBeforeMount(() => {
                 :transform="'translate(' + rightClickMenu.getX() + ', ' + rightClickMenu.getY() + ')'">
                 <!-- 裏側 -->
                 <g transform="translate(0, 0)" v-if="rightClickMenu.hasUra()">
-                    <rect width="120" height="120" style="fill: #666666; fill-opacity: 0.9;" />
+                    <rect width="120" height="110" style="fill: #666666; fill-opacity: 0.9;" />
                     <g transform="translate(10, 10)">
                         <use width="100" height="100" :href="rightClickMenu.getKomaUraId()" />
                         <rect width="100" height="100" class="square" @click="clickSetUra" />
@@ -971,9 +971,9 @@ onBeforeMount(() => {
                 </g>
 
                 <!-- 先後逆 -->
-                <g :transform="'translate(0, ' + (rightClickMenu.hasUra() ? 120 : 0) + ')'">
-                    <rect width="120" height="110" style="fill: #666666; fill-opacity: 0.9;" />
-                    <g transform="translate(10, 0)">
+                <g :transform="'translate(0, ' + (rightClickMenu.hasUra() ? 110 : 0) + ')'">
+                    <rect width="120" height="120" style="fill: #666666; fill-opacity: 0.9;" />
+                    <g transform="translate(10, 10)">
                         <use width="100" height="100" :href="rightClickMenu.getKomaSengoGyakuId()" />
                         <rect width="100" height="100" class="square" @click="clickSetSengoGyaku" />
                     </g>
